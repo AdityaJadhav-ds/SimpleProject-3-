@@ -33,7 +33,7 @@ while True :
               print(" Enter atleat one upper ")
         
             if not lower : 
-              print(" print atleat one lower ")
+              print(" Enter atleat one lower ")
         
             if not digit : 
               print(" add atleat one digit ")
