@@ -1,40 +1,37 @@
-
-while True : 
+while True: 
     login = input("Enter User Name: ")
    
-    while True :
-        password = input("Enter password : ")
+    while True:
+        password = input("Enter password: ")
     
         upper = False
         lower = False
         digit = False
     
+        if len(password) < 8:
+            print("Enter a strong password again (minimum 8 characters)")
+            continue  
     
-        if len(password) < 8 :
-         print("Enter the Strong password again minimum 8 character")
-         continue  
-    
-        for i in password :
-            if i.isupper(): 
+        for char in password:
+            if char.isupper():
                 upper = True 
-            if i.islower(): 
+            if char.islower():
                 lower = True 
-            if i.isdigit(): 
+            if char.isdigit():
                 digit = True 
 
-        if upper and lower and digit : 
-            print("strong password")
+        if upper and lower and digit: 
+            print("✅ Strong password")
             break
+        else: 
+            print("❌ Weak password. Please try again:")
 
-        else : 
-            print(" enter Strong pass again ")
-
-            if not upper : 
-              print(" Enter atleat one upper ")
+            if not upper: 
+                print("- Enter at least one uppercase letter")
         
-            if not lower : 
-              print(" Enter atleat one lower ")
+            if not lower: 
+                print("- Enter at least one lowercase letter")
         
-            if not digit : 
-              print(" add atleat one digit ")
-    break    
+            if not digit: 
+                print("- Enter at least one digit")
+    break
