@@ -30,7 +30,7 @@ while True :
             print(" enter Strong pass again ")
 
             if not upper : 
-              print(" print atleat one upper ")
+              print(" Enter atleat one upper ")
         
             if not lower : 
               print(" print atleat one lower ")
